@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="text-align:center;">
+<font size="4">
+数値を入力してください
+</font>
+<hr>
+
+<form action="./" method="post">
+    <!-- 初期値はDatasetの平均値 -->
+    <label>GrLivArea</label><br>
+    <input class="form-control" type="text" size="10" name="GrLivArea" value="1510"><br>
+    <label>GarageCars</label><br>
+    <input class="form-control" type="text" size="10" name="GarageCars" value="1"><br>
+    <label>TotalBsmtSF</label><br>
+    <input class="form-control" type="text" size="10" name="TotalBsmtSF" value="1057"><br>
+    <label>BsmtFinSF1/label><br>
+    <input class="form-control" type="text" size="10" name="BsmtFinSF1" value="444"><br>
+    <label>1stFlrSF"</label><br>
+    <input class="form-control" type="text" size="10" name="1stFlrSF" value="1160"><br>
+    <hr>
+    <input class="btn btn-primary" type="submit" value="送信">
+    <hr>
+
+</form>
+
+{% if pred %}
+<font size="5"><b>予測結果: ${{ pred }} </b></font><br>
+<hr>
+{% endif %}
+
+</div>
+
+{% endblock %}
